@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'resusable_card.dart';
-
-const activeCardColor = Color(0xFF1D1E33);
-const inactiveCardColor = Color(0xFF111328);
-const bottomContainerHeight = 80.0;
-const bottomContainerColor = Color(0xFFEB1555);
+import 'constants.dart';
 
 enum Gender { Male, Female }
 
@@ -69,7 +65,12 @@ class _InputPageState extends State<InputPage> {
           ),
           // Height Slider Card
           Expanded(
-            child: ReusableCard(color: activeCardColor),
+            child: ReusableCard(
+              color: activeCardColor,
+              cardChild: Column(children: <Widget>[
+
+              ]),
+            ),
           ),
           Expanded(
               child: Row(
