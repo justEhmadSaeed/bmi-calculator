@@ -34,8 +34,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: selectedGender == Gender.Male
-                        ? activeCardColor
-                        : inactiveCardColor,
+                        ? kActiveCardColor
+                        : kInactiveCardColor,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.mars,
                       label: 'MALE',
@@ -52,8 +52,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     color: selectedGender == Gender.Female
-                        ? activeCardColor
-                        : inactiveCardColor,
+                        ? kActiveCardColor
+                        : kInactiveCardColor,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
@@ -66,7 +66,7 @@ class _InputPageState extends State<InputPage> {
           // Height Slider Card
           Expanded(
             child: ReusableCard(
-              color: activeCardColor,
+              color: kActiveCardColor,
               cardChild: Column(children: <Widget>[
 
               ]),
@@ -78,21 +78,21 @@ class _InputPageState extends State<InputPage> {
               // Weight Input Card
               Expanded(
                 flex: 1,
-                child: ReusableCard(color: activeCardColor),
+                child: ReusableCard(color: kActiveCardColor),
               ),
               // Age Input Card
               Expanded(
                 flex: 1,
-                child: ReusableCard(color: activeCardColor),
+                child: ReusableCard(color: kActiveCardColor),
               )
             ],
           )),
           // Calculate Button
           Container(
-            color: bottomContainerColor,
+            color: kBottomContainerColor,
             margin: EdgeInsets.only(top: 10),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           ),
         ]));
   }
