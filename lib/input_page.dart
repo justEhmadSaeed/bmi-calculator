@@ -16,21 +16,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Color maleCardColor = inactiveCardColor;
-  Color femaleCardColor = inactiveCardColor;
-
-  // 1 = male, 2 = female
-  void updateColor(Gender selectedGender) {
-    // male card is pressed
-    if (selectedGender == Gender.Male) {
-      maleCardColor = activeCardColor;
-      femaleCardColor = inactiveCardColor;
-      // female card is pressed
-    } else {
-      femaleCardColor = activeCardColor;
-      maleCardColor = inactiveCardColor;
-    }
-  }
+  Gender selectedGender;
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +33,13 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        updateColor(Gender.Male);
+                        selectedGender = Gender.Male;
                       });
                     },
                     child: ReuseableCard(
-                      color: maleCardColor,
+                      color: selectedGender == Gender.Male
+                          ? activeCardColor
+                          : inactiveCardColor,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.mars,
                         label: 'MALE',
@@ -64,11 +52,13 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        updateColor(Gender.Female);
+                        selectedGender = Gender.Female;
                       });
                     },
                     child: ReuseableCard(
-                      color: femaleCardColor,
+                      color: selectedGender == Gender.Female
+                          ? activeCardColor
+                          : inactiveCardColor,
                       cardChild: IconContent(
                         icon: FontAwesomeIcons.venus,
                         label: 'FEMALE',
