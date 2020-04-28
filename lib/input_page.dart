@@ -28,6 +28,7 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: <Widget>[
+                // Male Input Card
                 Expanded(
                   flex: 1,
                   child: ReusableCard(
@@ -45,6 +46,7 @@ class _InputPageState extends State<InputPage> {
                     ),
                   ),
                 ),
+                // Female Input Card
                 Expanded(
                   flex: 1,
                   child: ReusableCard(
@@ -65,22 +67,26 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
+          // Height Slider Card
           Expanded(
             child: ReusableCard(color: activeCardColor),
           ),
           Expanded(
               child: Row(
             children: <Widget>[
+              // Weight Input Card
               Expanded(
                 flex: 1,
                 child: ReusableCard(color: activeCardColor),
               ),
+              // Age Input Card
               Expanded(
                 flex: 1,
                 child: ReusableCard(color: activeCardColor),
               )
             ],
           )),
+          // Calculate Button
           Container(
             color: bottomContainerColor,
             margin: EdgeInsets.only(top: 10),
