@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
-import 'resuseable-card.dart';
+import 'resusable_card.dart';
 
 const activeCardColor = Color(0xFF1D1E33);
 const inactiveCardColor = Color(0xFF111328);
@@ -36,7 +36,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.Male;
                       });
                     },
-                    child: ReuseableCard(
+                    child: ReusableCard(
                       color: selectedGender == Gender.Male
                           ? activeCardColor
                           : inactiveCardColor,
@@ -55,7 +55,7 @@ class _InputPageState extends State<InputPage> {
                         selectedGender = Gender.Female;
                       });
                     },
-                    child: ReuseableCard(
+                    child: ReusableCard(
                       color: selectedGender == Gender.Female
                           ? activeCardColor
                           : inactiveCardColor,
@@ -70,18 +70,18 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           Expanded(
-            child: ReuseableCard(color: activeCardColor),
+            child: ReusableCard(color: activeCardColor),
           ),
           Expanded(
               child: Row(
             children: <Widget>[
               Expanded(
                 flex: 1,
-                child: ReuseableCard(color: activeCardColor),
+                child: ReusableCard(color: activeCardColor),
               ),
               Expanded(
                 flex: 1,
-                child: ReuseableCard(color: activeCardColor),
+                child: ReusableCard(color: activeCardColor),
               )
             ],
           )),
