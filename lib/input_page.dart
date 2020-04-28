@@ -25,21 +25,31 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   flex: 1,
-                  child: ReuseableCard(
-                    color: cardColor,
-                    cardChild: IconContent(
-                      icon: FontAwesomeIcons.mars,
-                      label: 'MALE',
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Male Card was Pressed');
+                    },
+                    child: ReuseableCard(
+                      color: cardColor,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'MALE',
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
                   flex: 1,
-                  child: ReuseableCard(
-                    color: cardColor,
-                    cardChild: IconContent(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'FEMALE',
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Female Card was Pressed');
+                    },
+                    child: ReuseableCard(
+                      color: cardColor,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'FEMALE',
+                      ),
                     ),
                   ),
                 )
@@ -71,5 +81,3 @@ class _InputPageState extends State<InputPage> {
         ]));
   }
 }
-
-
