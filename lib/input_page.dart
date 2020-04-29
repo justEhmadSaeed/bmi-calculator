@@ -40,6 +40,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.mars,
                       label: 'MALE',
+                      active: selectedGender == Gender.Male ? true : false,
                     ),
                   ),
                 ),
@@ -58,6 +59,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
+                      active: selectedGender == Gender.Female ? true : false,
                     ),
                   ),
                 )

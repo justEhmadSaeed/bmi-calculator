@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 class IconContent extends StatelessWidget {
-  IconContent({@required this.icon, this.label});
+  IconContent({@required this.icon, this.label, this.active});
 
   final IconData icon;
   final String label;
+  final bool active;
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +16,18 @@ class IconContent extends StatelessWidget {
           Icon(
             icon,
             size: 80.0,
+            color: active ? Colors.white : kInactiveLabelColor,
           ),
           SizedBox(
             height: 15.0,
           ),
           Text(
             label,
-            style: kLabelTextStyle
-          )
+            style: TextStyle(
+              fontSize: 18.0,
+              color: active ? Colors.white : kInactiveLabelColor,
+            ),
+          ),
         ]);
   }
 }
