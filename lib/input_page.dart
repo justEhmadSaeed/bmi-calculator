@@ -15,6 +15,7 @@ class _InputPageState extends State<InputPage> {
   Gender selectedGender;
   int height = 170;
   int weight = 60;
+  int age = 20;
 
   @override
   Widget build(BuildContext context) {
@@ -118,6 +119,7 @@ class _InputPageState extends State<InputPage> {
               child: Row(
             children: <Widget>[
               // Weight Input Card
+
               Expanded(
                 flex: 1,
                 child: ReusableCard(
@@ -171,10 +173,60 @@ class _InputPageState extends State<InputPage> {
                       ]),
                 ),
               ),
+
               // Age Input Card
               Expanded(
                 flex: 1,
-                child: ReusableCard(color: kActiveCardColor),
+                child: ReusableCard(
+                  color: kActiveCardColor,
+                  cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'AGE',
+                          style: kLabelTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                          textBaseline: TextBaseline.alphabetic,
+                          children: <Widget>[
+                            Text(
+                              age.toString(),
+                              style: kNumberStyle,
+                            ),
+                            Text(
+                              'yr',
+                              style: kLabelTextStyle,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.minus,
+                              onPressed: () {
+                                setState(() {
+                                  age--;
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            RoundIconButton(
+                              icon: FontAwesomeIcons.plus,
+                              onPressed: () {
+                                setState(() {
+                                  age++;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ]),
+                ),
               )
             ],
           )),
