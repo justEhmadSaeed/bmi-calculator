@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class BottomButton extends StatelessWidget {
-  BottomButton({@required this.bottonTitle, @required this.onTap});
+  BottomButton({@required this.buttonTitle, @required this.onTap});
 
   final Function onTap;
-  final String bottonTitle;
+  final String buttonTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class BottomButton extends StatelessWidget {
           height: kBottomContainerHeight,
           child: Center(
               child: Text(
-            bottonTitle,
+            buttonTitle,
             style: kLargeButtonStyle,
           ))),
     );

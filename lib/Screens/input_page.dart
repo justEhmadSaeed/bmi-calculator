@@ -235,7 +235,7 @@ class _InputPageState extends State<InputPage> {
           )),
           // Calculate Button
           BottomButton(
-            bottonTitle: 'CALCULATE',
+            buttonTitle: 'CALCULATE',
             onTap: () {
               Navigator.push(
                 context,
