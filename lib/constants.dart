@@ -28,4 +28,8 @@ const kBMITextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-const kBodyTextStyle = TextStyle(fontSize: 22,);
+const kBodyTextStyle = TextStyle(
+  fontSize: 22,
+);
+
+const kLinkedInUrl = 'https://www.linkedin.com/in/justehmadsaeed/';
