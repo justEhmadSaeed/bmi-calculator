@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import '../Components/resusable_card.dart';
 import '../Components/bottom_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ResultPage extends StatelessWidget {
   ResultPage(
@@ -12,6 +13,7 @@ class ResultPage extends StatelessWidget {
   final String bmiResult;
   final String resultText;
   final String interpretation;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +55,26 @@ class ResultPage extends StatelessWidget {
                         style: kBodyTextStyle,
                         textAlign: TextAlign.center,
                       ),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                          textBaseline: TextBaseline.alphabetic,
+                          children: <Widget>[
+                            Text('MADE BY '),
+                            InkWell(
+                              child: Text(
+                                'EHMAD SAEED',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    decoration: TextDecoration.underline),
+                              ),
+                              onTap: () async {
+                                if (await canLaunch(kLinkedInUrl))
+                                  await launch(kLinkedInUrl);
+                              },
+                            )
+                          ])
                     ]),
               ),
             ),
