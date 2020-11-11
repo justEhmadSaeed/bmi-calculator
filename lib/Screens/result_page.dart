@@ -70,8 +70,7 @@ class ResultPage extends StatelessWidget {
                                     decoration: TextDecoration.underline),
                               ),
                               onTap: () async {
-                                if (await canLaunch(kLinkedInUrl))
-                                  await launch(kLinkedInUrl);
+                                if (await canLaunch(kUrl)) await launch(kUrl);
                               },
                             )
                           ])

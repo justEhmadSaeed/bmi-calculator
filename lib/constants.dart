@@ -32,4 +32,4 @@ const kBodyTextStyle = TextStyle(
   fontSize: 22,
 );
 
-const kLinkedInUrl = 'https://www.linkedin.com/in/justehmadsaeed/';
+const kUrl = 'https://www.twitter.com/justehmadsaeed/';
